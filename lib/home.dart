@@ -140,6 +140,39 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Consumer<ExpenseData>(
       builder: (context, value, child) => Scaffold(
+          appBar: AppBar(
+            toolbarHeight: 80,
+            backgroundColor: Colors.black87,
+            elevation: 0,
+            title: Row(
+              children: [
+                SizedBox(
+                  width: 10,
+                ),
+                Image.asset("assets/spending.png", scale: 10.0),
+                SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Expense",
+                      style: TextStyle(
+                        fontSize: 18,
+                      ),
+                    ),
+                    Text(
+                      "Tracker App",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
           backgroundColor: Colors.grey[300],
           floatingActionButton: FloatingActionButton(
             onPressed: addNewExpense,
